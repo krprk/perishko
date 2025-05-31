@@ -1,45 +1,115 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>пёрышко</title>
-    <link rel="stylesheet" href="style.css">
-    
+  <meta charset="UTF-8" />
+  <title>пёрышко</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet"/>
+
+
+  <div class="header">
+    <div class="header__logo">
+      <div class="logo">
+        <img src="assets/logo.png" alt="Логотип">
+      </div>
+    </div>
+    <nav class="navigation">
+      <a href="#" onclick="goToSlide(0)">о нас</a>
+      <a href="#" onclick="goToSlide(1)">ментальное</a>
+      <a href="#" onclick="goToSlide(2)">физическое</a>
+      <a href="#" onclick="goToSlide(3)">приложение</a>
+    </nav>
+  </div>
 </head>
+
 <body>
-    <div class="fixed-header">
-        <div class="header-logo">
-            <div class="logo">
-                <img src="logo.png" alt="Логотип">
-            </div>
-        </div>
-        <div class="navigation">
-            <a href="#about">о нас</a>
-            <a href="#mental">ментальное</a>
-            <a href="#physical">физическое</a>
-            <a href="#app">приложение</a>
-        </div>
+
+  <div id="slider__react"></div>
+  <script src="slider.js"></script>
+  
+  <div id="slide__contents" style="display:none">
+    <div id="slide__about">
+      <h2>о нас</h2>
+      <p>мы представляем вам <span class="perishko">пёрышко</span>.</p>
+      <p><span class="perishko">пёрышко</span> — это платформа поддержки ментального и физического здоровья, объединяющая лучшие практики заботы о себе в одном месте. Мы создаём пространство, где технологии и забота о человеке встречаются, чтобы помогать людям жить легче, устойчивее и здоровее. через коллаборации с экспертами и компаниями в смежных областях мы открываем доступ к разнообразным инструментам самопомощи, терапии и оздоровления.</p>
+      <p>мы стремимся к тому, чтобы забота о себе стала привычной и доступной каждому — в любое время и в любом месте. наш подход строится на мягкой поддержке, уважении к индивидуальности и современных решениях, которые работают.</p>
     </div>
-    <div class="slide">
-        <div id="about" class="slide__about">
-            <div class="slide__about__text"></div>
-            <div class="slide__about__photo"></div>
-        </div>
-        <div id="mental" class="slide__mental">
-            <div class="slide__mental__text"></div>
-            <div class="slide__mental__photo"></div>
-        </div>
-        <div id="physical" class="slide__physical">
-            <div class="slide__physical__text"></div>
-            <div class="slide__physical__photo"></div>
-        </div>
-        <div id="app" class="slide__app">
-            <div class="slide__app__text"></div>
-            <div class="slide__app__photo"></div>
-        </div>
+    <div id="slide__mental">
+      <h2>ментальное</h2>
+      <p>мы верим, что душевное равновесие — основа благополучия. <span class="perishko">пёрышко</span> предлагает инструменты для работы с тревогой, стрессом, выгоранием и самооценкой: от медитаций и дневников до программ с участием психологов и менторов. через наш интерфейс можно получить доступ к проверенным практикам и сервисам партнёров — всё в одном приложении.</p>
+      <p>мы понимаем, как важно иметь безопасное пространство для восстановления. поэтому на нашей платформе можно выбирать тот формат поддержки, который подходит именно вам — без давления и в удобном темпе.</p>
+      <p>каждый человек уникален, и именно поэтому мы предлагаем гибкие пути: будь то короткие дыхательные сессии, регулярные практики осознанности или контакт с профессионалами — всё это доступно вам в несколько кликов.</p>
     </div>
-    <div class="footer">
-        <div class="footer__links"></div>
+    <div id="slide__physical">
+      <h2>физическое</h2>
+      <p>физическое и ментальное здоровье неразделимы. мы поддерживаем вас в движении к лучшему самочувствию через трекеры активности, программы питания, практики восстановления и сотрудничество с фитнес-платформами и wellness-брендами. всё, что нужно для заботы о теле — в удобной экосистеме <span class="perishko">пёрышка</span>.</p>
+      <p>будь то лёгкая утренняя разминка, дыхательные практики или полноценная тренировочная программа — вы сами выбираете, что нужно именно вашему телу сегодня. мы лишь подскажем путь.</p>
+      <p>интеграции с партнёрскими сервисами позволяют отслеживать прогресс, получать рекомендации и поддерживать мотивацию — всё синхронизировано в одном потоке. ваше тело заслуживает внимания, и мы здесь, чтобы помочь его слышать.</p>
     </div>
+    <div id="slide__app">
+      <h2>приложение</h2>
+      <p>наше приложение — это ваш персональный гид по здоровью. интеграция с сервисами партнёров, персонализированные рекомендации, напоминания, аналитика самочувствия и мотивационные треки делают путь к благополучию простым и органичным. установите <span class="perishko">пёрышко</span>, чтобы всё нужное было под рукой — в одном лёгком движении.</p>
+      <p>мы создавали приложение таким, чтобы им хотелось пользоваться каждый день — легко, интуитивно, с вниманием к деталям. это ваш личный помощник, который не перегружает, а поддерживает.</p>
+      <p>c каждым обновлением мы добавляем новые возможности: от совместных программ с экспертами до функций для команды и семьи. <span class="perishko">пёрышко</span> — это больше, чем трекер. Это забота в цифровом формате.</p>
+    </div>
+  </div>
+
+  <section class="partners container my-5">
+    <h2 class="partners__text text-center mb-4">наши партнёры</h2>
+    <div class="row justify-content-center g-4">
+      <div class="col-6 col-md-3">
+        <a href="https://new.yasno.live" target="_blank">
+          <img src="assets/partner1.png" alt="Партнёр 1" class="partner__logo">
+        </a>
+      </div>
+      <div class="col-6 col-md-3">
+        <a href="https://www.fitmost.ru" target="_blank">
+          <img src="assets/partner2.png" alt="Партнёр 2" class="partner__logo">
+        </a>
+      </div>
+      <div class="col-6 col-md-3">
+        <a href="https://samokat.ru" target="_blank">
+          <img src="assets/partner3.png" alt="Партнёр 3" class="partner__logo">
+        </a>
+      </div>
+      <div class="col-6 col-md-3">
+        <a href="https://consumer.huawei.com/ru/mobileservices/health/" target="_blank">
+          <img src="assets/partner4.png" alt="Партнёр 4" class="partner__logo">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer mt-5">
+    <div class="container py-4">
+      <div class="row align-items-center text-center text-md-start">
+        <div class="col-md-6 mb-3 mb-md-0">
+          <img src="assets/logo.png" alt="Пёрышко" class="footer__logo mb-2">
+          <p class="footer__text">© 2025 пёрышко. Все права защищены.</p>
+        </div>
+
+        <div class="col-md-6">
+          <h5 class="footer__heading">Мы в соцсетях</h5>
+          <div class="footer__social-icons">
+            <a href="https://tiktok.com" target="_blank">
+              <img src="assets/tiktok-icon.svg" alt="TikTok">
+            </a>
+            <a href="https://telegram.org" target="_blank">
+              <img src="assets/telegram-icon.svg" alt="Telegram">
+            </a>
+            <a href="https://vk.com" target="_blank">
+              <img src="assets/vk-icon.svg" alt="VK">
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+ 
+
 </body>
 </html>
