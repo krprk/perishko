@@ -2,6 +2,3 @@
 
 
 https://krprk.github.io/perishko/
-
-примерно как-то так должно будет быть
-![2025-04-22_21h08_28](https://github.com/user-attachments/assets/41bdbe50-2716-4f34-95c8-4d688c0800aa)
