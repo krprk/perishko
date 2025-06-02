@@ -19,7 +19,25 @@
       goToSlideExternally = (index) => {
         setCurrent(index);
       };
+      
+      let startX = 0;
+      let endX = 0;
 
+      const handleSwipe = () => {
+        const diff = startX - endX;
+        if (Math.abs(diff) > 50) {
+          if (diff > 0) nextSlide();
+          else prevSlide();
+        }
+      };
+      return React.createElement('div', {
+        className: 'slider',
+        onTouchStart: (e) => startX = e.touches[0].clientX,
+        onTouchEnd: (e) => {
+          endX = e.changedTouches[0].clientX;
+          handleSwipe();
+        }
+      };
       return React.createElement('div', { style: { position: 'relative' } },
 
         React.createElement('div', { className: 'nav-zone left', onClick: prevSlide, 'aria-label': 'Previous slide' }),
