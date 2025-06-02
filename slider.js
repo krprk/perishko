@@ -46,7 +46,7 @@
       );
     }
 
-    const root = createRoot(document.getElementById('slider__react'));
+    const root = createRoot(document.getElementById('slider'));
     root.render(React.createElement(Slider));
 
     function goToSlide(index) {
