@@ -205,7 +205,7 @@ h2 {
     height: 7vh;
   }
 
-  .header img{
+  .logo img{
     height: 5vh;
   }
 
@@ -221,13 +221,13 @@ h2 {
     width: 100%;
   }
 
-  .navigation {
+  .header__navigation {
     flex-direction: column;
     height: auto;
     padding: 0.2em 0;
   }
 
-  .navigation a {
+  .header__navigation a {
     font-size: 2vh;
     margin: 0.1em 0;
   }
