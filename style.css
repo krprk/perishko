@@ -33,7 +33,7 @@ h2 {
   justify-content: center;
 }
 
-.header__logo__img img {
+.header__logo__img {
   height: 5vh;
   display: flex;
   margin-left: auto;
