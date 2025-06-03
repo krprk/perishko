@@ -33,7 +33,7 @@ h2 {
   justify-content: center;
 }
 
-.logo img {
+.header__logo__img img {
   height: 5vh;
   display: flex;
   margin-left: auto;
@@ -41,7 +41,7 @@ h2 {
   justify-content: center;
 }
 
-.navigation{
+.header__navigation{
   display: flex;
   background-color: #CEFFFB;
   height: 4vh;
@@ -49,7 +49,7 @@ h2 {
   justify-content: space-between;
 }
 
-.navigation a{
+.header__navigation a{
   font-family: 'Comfortaa';
   font-size: 2vh;
   width: auto;
