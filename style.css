@@ -41,7 +41,7 @@ h2 {
   justify-content: center;
 }
 
-.header__navigation{
+.navigation{
   display: flex;
   background-color: #CEFFFB;
   height: 4vh;
@@ -49,7 +49,7 @@ h2 {
   justify-content: space-between;
 }
 
-.header__navigation a{
+.navigation a{
   font-family: 'Comfortaa';
   font-size: 2vh;
   width: auto;
@@ -221,13 +221,13 @@ h2 {
     width: 100%;
   }
 
-  .header__navigation {
+  .navigation {
     flex-direction: column;
     height: auto;
     padding: 0.2em 0;
   }
 
-  .header__navigation a {
+  .navigation a {
     font-size: 2vh;
     margin: 0.1em 0;
   }
